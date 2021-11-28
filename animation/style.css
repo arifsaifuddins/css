@@ -1,0 +1,207 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	background-color: #999;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.judul{
+	font-size: 80px;
+	font-family: impact;
+	color: lightsalmon;
+	text-shadow: 2px 2px 3px #fff ;
+	text-align: center;
+	margin-top: 30px;
+	font-weight: bold;
+}
+.container{
+	width: 900px;
+	height: 300px;
+	margin: 50px auto;
+	background-color: #ccc;
+	border: 2px solid #FFF;
+	border-radius: 30px;
+	padding: 50px 0;
+	box-sizing: border-box;
+	box-shadow: 0 0 10px #fff;
+}
+.gallery li, .gallery li .image, .gallery li span{
+ 	widows: 200px;
+ 	height: 200px;
+ 	border-radius: 50%;
+ 
+}
+
+.gallery li{
+	border: 2px solid #fff;
+	display: inline-block;
+	position: relative;
+	margin: auto 45px;
+	box-shadow: 0px 0px 19px #000;
+
+}
+.gallery li span{
+	text-align: center;
+	line-height: 200px;
+	font-family: verdana;
+	font-size: 30px;
+	font-weight: bolder;
+	color: #fff;
+	text-shadow:0 0 10px #000 ;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	opacity: 0;
+	background-color: rgba(200, 200, 200, .5);
+	transform: scale(0) rotate(0);
+	transition: .4s;
+
+
+}
+.gallery li a:hover span{
+	opacity: 1;
+    transform: scale(1) rotate(360deg);
+}
+
+/*overlay*/
+
+.overlay{
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	text-align: center;
+	padding: 20px 0 60px 0;
+	background-color: rgba(0, 0, 0, .0);
+	z-index: 999;
+	transition: .5s;
+}
+
+.overlay:target{
+	width: auto;
+	height: auto;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, .7);
+}
+.overlay img{
+	width: 560px;
+	border-radius: 20px;
+	max-height: 100%;
+	max-width: 100%;
+	box-shadow: 0 0 10px #222;
+	border: 1px solid #fff;
+	
+
+}
+.overlay:target img{
+	animation: animasi1 1s;
+}
+.overlay .tombol{
+	text-decoration: none;
+	font-size: 25px;
+	font-family: impact;
+	color: #fff;
+	background-color: #222;
+	border: 1px solid #fff;
+	padding: 5px;
+	border-radius: 10px;
+	box-shadow: 0 0 5px #222;
+	opacity: 0;
+	
+}
+.overlay:target .tombol{
+	opacity: 1;
+	animation: animasi2 1s forwards ;
+}
+
+.overlay .close{
+	position: absolute;
+	bottom: 5px;
+	right: 50%;
+	margin-right: -35px;
+}
+.overlay .back{
+	position: absolute;
+	bottom: 5px;
+	left: 44%;
+}
+.overlay .next{
+	position: absolute;
+	bottom: 5px;
+	right: 44%;
+	
+}
+
+
+
+
+
+
+
+
+
+@keyframes animasi1{
+	0%{
+		transform: scale(0);
+		opacity: 0;
+	}
+	100%{
+		transform: scale(1);
+		opacity: 1;
+	}
+
+}
+@keyframes animasi2{
+	0%{
+		opacity: 0;
+		margin-bottom: -100px;
+	}
+	100%{
+		margin-bottom: 0;
+		opacity: 1;
+	}
+
+}

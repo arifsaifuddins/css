@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Grid CSS</title>
+	<style>
+		body{
+			font:20px/10px arial ;
+			font-family: impact;
+			color: #fff;
+		}
+
+		/* grid by float */
+
+		/*.container{
+			width: 600px;
+			padding: 10px;
+			margin: 50px auto;
+			border: 2px solid #111;
+			box-sizing: border-box;
+		}
+
+		header{
+			height: 60px;
+			text-align: center;
+			line-height: 60px;
+			background-color: blue;
+		}
+
+		.content::after{
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		.aside{
+			float: left;
+			width: 196px;
+		}
+
+		nav{
+			height: 200px;
+			background-color: red;
+			text-align: center;
+			line-height: 200px;
+		}
+
+		aside{
+			height: 100px;
+			background-color: green;
+			text-align: center;
+			line-height: 100px;
+		}
+
+		main{
+			width: 380px;
+			height: 300px;
+			background-color: orange;
+			text-align: center;
+			line-height: 300px;	
+			float: right;
+		}
+
+		footer{
+			text-align: center;
+			background-color: #111;
+			padding: 10px 0;
+			}*/
+
+			/* grid by flex */
+
+		/*.container{
+			width: 600px;
+			padding: 10px;
+			margin: 50px auto;
+			border: 2px solid #111;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+		}
+
+		header{
+			height: 60px;
+			background-color: blue;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.content{
+			display: flex;
+		}
+
+		.aside{
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+		}
+
+		nav{
+			flex: 2;
+			background-color: red;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		aside{
+			flex: 1;
+			background-color: green;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		main{
+			height: 300px;
+			flex: 1.5;
+			background-color: orange;
+			display: flex;
+			align-items: center;
+			justify-content: center;	
+		}
+
+		footer{
+			height: 30px;
+			background-color: #111;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			}*/
+
+		/* grid */
+
+		.container{
+			width: 600px;
+			padding: 10px;
+			margin: 50px auto;
+			border: 2px solid #111;
+			box-sizing: border-box;
+			display: grid;
+			grid-template-areas: 
+			"header header" 
+			"nav main" 
+			"aside main" 
+			"footer footer";
+			grid-auto-columns: 1fr 1.5fr;
+			grid-auto-rows: 1fr 2.5fr 1.3fr .5fr;
+		}
+
+		header{
+			grid-area: header;
+			height: 60px;
+			background-color: blue;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		nav{
+			grid-area: nav;
+			background-color: red;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		aside{
+			grid-area: aside;
+			background-color: green;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		main{
+			grid-area: main;
+			background-color: orange;
+			display: flex;
+			align-items: center;
+			justify-content: center;	
+		}
+
+		footer{
+			grid-area: footer;
+			background-color: #111;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	</style>
+</head>
+<body>
+	<!-- <div class="container">
+		<header>header</header>
+		<div class="content">
+			<div class="aside">
+				<nav>nav</nav>
+				<aside>aside</aside>
+			</div>
+			<main>main</main>
+		</div>
+		<footer>footer</footer>
+	</div> -->
+	<div class="container">
+		<header>header</header>
+		<nav>nav</nav>
+		<aside>aside</aside>
+		<main>main</main>
+		<footer>footer</footer>
+	</div>
+	
+	
+</body>
+</html>

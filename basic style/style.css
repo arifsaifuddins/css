@@ -1,0 +1,65 @@
+h1{
+	font-family: arial, sans-serif;
+	text-align: center;
+	font-weight: bolder;
+	color: skyblue;
+	color: rgb(0, 0, 0);
+	text-transform: capitalize;
+
+}
+body div {
+	font-family: arial;
+	font-weight: normal;
+	font-size: ;
+	font-style: normal;
+	line-height: 20px;
+	color: #f00f;
+	text-align: justify;
+	text-indent: 30px;
+	letter-spacing: 2px;
+	word-spacing: 10px;
+}
+
+body{
+	background-color: lightgrey;
+	background-image: url(windows10.jpg);
+	background-repeat: no-repeat;
+	background-size: 100px;
+	background: color url() top right no-repeat;
+}
+
+a {
+	text-decoration: none;
+	font-size: 30px;
+}
+ul#list{
+	color: green;
+}
+
+ul#list li:first-child a{
+	color: red;
+}
+ul#list li:last-child a{
+	color: black;
+}
+ul#list li:nth-child(2n) a :hover{
+	color: black;
+}
+}
+ul#list li:nth-child(odd) a {
+	color: blue;
+}
+ul.list :hover{
+	color: yellow;
+}
+ul.list :link{
+	color: grey;
+
+}
+ul.list :active{
+	color: red;
+}
+
+ul.list :visited{
+	color: orange;
+}

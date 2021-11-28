@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Unit</title>
+  <link rel="stylesheet" href="cssunit.css">
+</head>
+
+<body>
+
+  <button>Dark Mode</button>
+
+  <div class="container">
+    <h1>css unit</h1>
+    <h4>(custom properties)</h4>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum totam optio deleniti quibusdam repudiandae minus
+      perferendis iure. Aut repellat sunt iste quidem. At optio harum sequi explicabo sapiente! Optio, repellat!</p>
+    <!-- <img src="image/mkn2.png" alt=""> -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni rem aliquam accusamus porro culpa eligendi illo
+      neque necessitatibus commodi, voluptas ipsum quisquam dolor quo. Blanditiis dignissimos, ea ducimus quaerat, cum
+      accusantium accusamus obcaecati, quasi debitis nam voluptas nihil consequuntur deleniti nobis nostrum adipisci
+      iusto
+      quibusdam tenetur tempora fuga sequi reprehenderit. Porro ab neque amet ipsa rem dicta vero velit illo aperiam,
+      asperiores maxime illum quisquam consequatur possimus architecto harum ea quas. Provident voluptatibus commodi
+      deleniti esse, nostrum incidunt? Rem sed neque repellat ab eligendi, illum officiis, ipsum voluptas iure fugiat
+      quod
+      omnis similique cum cupiditate quaerat ad facere repudiandae quisquam!</p>
+    <!-- <p class="quote">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, autem commodi? Velit culpa cumque
+      consequatur explicabo quod architecto assumenda dignissimos mollitia, laudantium deleniti laboriosam corporis
+      sapiente iusto magni eligendi debitis!"</p> -->
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi eius dolor deleniti aliquam repudiandae debitis
+      dolores ratione minus sapiente voluptatum ex numquam corporis illum, ipsum vero tempora quod quasi! Optio,
+      pariatur
+      ut, architecto deserunt, ipsum aliquam ratione repudiandae quaerat esse ab nulla nemo similique. Suscipit qui
+      provident expedita totam reiciendis.</p>
+  </div>
+
+  <main>
+    <label for="ukuran">Change Size :</label>
+    <input type="range" id="ukuran" min="0" max="200" value="0">
+    <br>
+    <label for="color">Change Color :</label>
+    <input type="color" id="color" value="#ff0000">
+
+    <div class="box"></div>
+  </main>
+
+  <script>
+    const button = document.querySelector('button');
+    const html = document.querySelector('html');
+
+    button.addEventListener('click', function () {
+      if (html.dataset.mode === 'light') {
+        html.dataset.mode = 'dark';
+        button.innerHTML = 'Light Mode'
+      } else {
+        html.dataset.mode = 'light';
+        button.innerHTML = 'Dark Mode'
+      }
+    });
+
+    const cSize = document.querySelector('#ukuran');
+    const cColor = document.querySelector('#color');
+    const box = document.querySelector('.box');
+
+    cSize.addEventListener('input', function () {
+      document.documentElement.style.setProperty('--padding', this.value + 'px');
+    });
+
+    cColor.addEventListener('input', function () {
+      document.documentElement.style.setProperty('--color1', this.value);
+    });
+  </script>
+</body>
+
+</html>

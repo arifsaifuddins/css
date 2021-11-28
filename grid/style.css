@@ -1,0 +1,115 @@
+/* istilah grid
+- container
+- item
+- line
+- cell
+- area
+- track (ukuran)
+- gap (spasi antar grid) */
+
+/* properties in container */
+
+body{
+	padding: 0;
+	margin: 0;
+}
+
+.container{
+	width: 60%;
+	height: 400px;
+	padding: 5px;
+	margin: 50px auto;
+	border: 1px solid #111;
+	display: grid;
+	grid-template-areas: 
+	'header header header' 
+	'nav sidebar sidebar'
+	'nav sidebar sidebar'
+	'footer footer footer';
+	grid-template-columns: 1fr 1fr 1fr ;
+	grid-template-rows: 2fr 3fr 3fr 1fr ;
+	/*grid-*/gap: 5px;
+	/*grid-*/column-gap: ;
+	/*grid-*/row-gap: ;
+	/*grid-template-columns: /*px % auto*/ /* [kotak 1] name*/ /*30px 3fr;*/
+	/*grid-template-columns: repeat(4, 5fr) repeat(2 /[auto-fill/fit], 2fr) repeat(2, 3fr);*/
+	/*grid-template-rows: 
+	minmax(100px, 1fr) 
+	/*px % auto*/ 
+	/*1fr 2fr  ;*/
+	/*grid-auto-flow: row column; */
+	/*grid-auto-columns: 6fr;*/
+	/*grid-auto-rows: 3fr ;*/
+	/*justify-items: start end center stretch ;*/
+	/*align-items:  start end center stretch  ;*/
+	/*place-items: (align-items) center /*(justify-items)*/ /*center;*/
+	/*justify-content:  start end center space-between stretch  ;*/
+	/*align-content:  start end center space-around/evenly stretch ;*/
+	/*place-content: (align-items) center /*(justify-items)*/ /*center;*/
+}
+
+/*.item{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	background-color: skyblue;
+}
+
+.item:nth-child(even){
+	background-color: salmon;
+}*/
+
+header, nav, aside, footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+} 
+
+header{
+	grid-area: header /*row-start / column-start / row-end / column-end*/ ;
+	grid-row: /*sesuai grid*/ /*1 2*/;
+	grid-column: /*sesuai grid*/ /*4 3 */;
+	/*justify-self:  start end center space-between stretch  ;*/
+	/*align-self:  start end center space-around/evenly stretch ;*/
+	/*place-self: (align-items) center /*(justify-items)*/ /*center;*/
+	background-color: blue;
+}
+
+nav{
+	grid-area: nav;
+	background-color: grey;
+}
+
+aside{
+	grid-area: sidebar;
+	background-color: green;
+}
+
+footer{
+	grid-area: footer;
+	background-color: yellow;
+}
+
+@media screen and (max-width: 500px){
+	.container{
+		display: grid;
+		grid-template-areas: 
+		'header header header' 
+		'nav nav nav'
+		'sidebar sidebar sidebar'
+		'footer footer footer';	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

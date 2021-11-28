@@ -1,0 +1,199 @@
+body{
+	background-color: #eaeaea;
+	font-family: arial;
+	line-height: 1.65;
+	padding-bottom: 1000px;
+}
+
+/*latihan 1*/
+
+.container-satu{
+	width: 800px;
+	margin: 50px auto;
+	background-color: #fff;
+	padding: 20px;
+	box-sizing: border-box;
+	display: flex;
+}
+.kolom-utama{
+	flex: 3;
+	order: 2;
+}
+.side-satu{
+	flex: 1;
+	order: 1;
+
+}
+.side-dua{
+	flex: 1;
+	order: 3;
+
+}
+
+/* latihan 2 */
+
+.container-dua{
+	max-width: 800px;
+	margin: 50px auto;
+	
+}
+
+.layanan{
+	margin-bottom: 20px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.layanan.satu{
+	background-color: #414194;
+}
+.layanan.dua{
+	background-color: #AE5F5F;
+}
+.layanan.tiga{
+	background-color: #5A934F;
+}
+
+/* latihan 3 */
+
+.container-tiga{
+	max-width: 800px;
+	margin :50px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.image{
+	width: 50%;
+}
+
+.image img{
+	width: 100%;
+}
+
+
+/* latihan 4 */
+
+
+.container-empat{
+	max-width: 800px;
+	margin: 50px auto;
+	display: flex;
+}
+
+.card{
+	border-radius: 15px;
+	border: 1px solid #000;
+	overflow: hidden;
+	flex: 1;
+	box-sizing: border-box;
+	margin: 20px;
+}
+
+.card .header{
+	padding: 5px;
+	overflow: hidden;
+}
+
+.card .header img{
+	width: 100%;
+	border-radius: 15px 15px 0 0;
+}
+
+.card .content{
+	background-color: #999;
+	text-align: center;
+	padding: 5px;
+	overflow: hidden;
+}
+
+.content button{
+	width: 50%;
+	height: 30px;
+	margin: 20px;
+	border-radius: 10px;
+	font-size: 60%;
+}
+
+.card.satu{
+	transform: scale(1.20);
+}
+
+
+/* latihan 5 */
+
+.container-lima{
+	width: 400px;
+	height: 200px;
+	margin: 50px auto;
+	display: flex;
+	border-radius: 10px;
+	border: 1px solid #999;
+}
+
+.kotak{
+	border-radius: 10px;
+	max-width: 200px;
+	max-height: 100px;
+	background-color: #999;
+	margin: auto;
+	display: flex;
+}
+
+.kotak span{
+	margin: auto;
+	font-size: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 600px){
+	.container-dua{
+		display: flex;
+		justify-content: space-between;
+	}
+	.layanan{
+		width: 30%;
+	}
+	.image{
+		width: 25%;
+	}
+	.container-lima{
+		width: 800px;
+		height: 400px;
+	}
+	.kotak{
+		width: 400px;
+		height: 200px;
+	}
+	span{
+		font-size: 70px;
+	}
+}

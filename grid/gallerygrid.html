@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Galley Grid</title>
+	<style>
+		body{
+			padding: 0;
+			margin: 0;
+			background-color: #aaa;
+		}
+
+		h1{
+			margin: 50px auto;
+			width: 200px;
+			padding: 5px;
+			text-align: center;
+			border: 4px solid #111;
+			border-radius: 10px;
+			background-color: #eee;
+			text-shadow: 0 0 3px #444;
+		}
+
+		.gallery{
+			width: 60%;
+			padding: 5px;
+			margin: 50px auto;
+			box-shadow: 2px 2px 2px #444,  -2px -2px 2px #eee ;
+			border: 4px solid #111;
+			border-radius: 10px;
+			background-color: #eee;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+			grid-gap: 5px;
+		}
+
+		img{
+			display: block;
+			width: 100%;
+			border-radius: 10px;
+		}
+
+		ul li{
+			list-style: none;
+		}
+	</style>
+</head>
+<body>
+	<h1>GALLERY</h1>
+	<ul class="gallery">
+		<li><img src="image/mkn1.png" alt=""></li>
+		<li><img src="image/mkn2.png" alt=""></li>
+		<li><img src="image/mkn3.png" alt=""></li>
+		<li><img src="image/mkn4.png" alt=""></li>
+		<li><img src="image/mkn5.png" alt=""></li>
+		<li><img src="image/mkn6.png" alt=""></li>
+		<li><img src="image/mkn1.png" alt=""></li>
+		<li><img src="image/mkn2.png" alt=""></li>
+		<li><img src="image/mkn3.png" alt=""></li>
+		<li><img src="image/mkn4.png" alt=""></li>
+	</ul>
+	
+	
+</body>
+</html>

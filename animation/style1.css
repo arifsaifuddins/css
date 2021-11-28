@@ -1,0 +1,214 @@
+/*border radius*/
+
+.borradi{
+	width: 200px;
+	height: 200px;
+	color: #fff;
+	background-color: blue;
+	text-align: center;
+	line-height: 200px;
+	border-radius: 30px /*50%*/;
+	/*border-right: 0;
+	border-left: 0;
+	border-bottom: 0;
+	border-top: 0;
+	border-radius: 0 0 0 0 ;*/
+}
+
+/* opacity */
+
+.transpa{
+	width: 200px;
+	height: 200px;
+	color: white;
+	background-color: red;
+	text-align: center;
+	line-height: 200px;
+	opacity: /*0.1 1 */0.5;
+}
+
+/* RGBA HSLA */
+
+.rgba{
+	width: 200px;
+	height: 200px;
+	color: white;
+	background-color: 
+	/*hsla(38, 27%, 0, .5),*/
+	rgba(255, 131, 0, .5);
+	text-align: center;
+	line-height: 200px;
+}
+
+/* box shadow */
+
+.bshadow{
+	width: 200px;
+	height: 200px;
+	color: white;
+	background-color: red;
+	text-align: center;
+	line-height: 200px;
+	margin: 50px auto;
+	box-shadow: 
+	/*inset*/
+	/*xoffset*/ 5px
+	/*yoffset*/ -5px
+	/*blur*/ 5px
+	/*spread 5px*/
+	/*color*/ black
+	;
+}
+
+/* text  shadow */
+
+.tshadow{
+	width: 400px;
+	height: 200px;
+	color: white;
+	background-color: red;
+	text-align: center;
+	line-height: 200px;
+	margin: 50px auto;
+	font-size: 50px;
+	text-shadow: 
+	/*xoffset*/ 5px
+	/*yoffset*/ 5px
+	/*blur*/ 5px
+	/*color*/ black,
+	-5px -5px 5px black
+	;
+}
+
+/* linear and radial gradient */
+
+.lingradi{
+	width: 200px;
+	height: 200px;
+	color: white;
+	background-color: green;
+	text-align: center;
+	line-height: 200px;
+	margin: 50px auto;
+	background-image:linear-gradient(90deg,/*to left,to bottom,*/yellow 50% ,blue /*20%*/, grey ) ;
+}
+
+.radgradi{
+	width: 200px;
+	height: 200px;
+	color: white;
+	background-color: green;
+	text-align: center;
+	line-height: 200px;
+	margin: 50px auto;
+	background-image:radial-gradient(
+		 circle at top left,
+		yellow 50% ,blue 20%, grey ) ;
+}
+
+/* vendor prefix */
+
+.vendor{
+	width: 200px;
+	height: 200px;
+	color: white;
+	background-color: green;
+	text-align: center;
+	line-height: 200px;
+	margin: 50px auto;
+	-webkit-filter: grayscale(50%);	
+	-moz-
+	-ms-
+	-o-
+	/*before a property*/
+}
+
+/* filter */
+
+img{
+	-webkit-filter: 
+	blur(4px)
+	/*brightness(9.0) 
+	contrast(100%) 
+	grayscale(50%) 
+	opacity(100%) 
+	sepia(50%) 
+	saturate(50%) 
+	hue-rotate(90deg) 
+	invert(50%)
+	drop-shadow(1px 1px);*/
+	;
+}
+
+.transform{
+	width: 200px;
+	height: 200px;
+	background-color: green;
+	margin: 50px auto;
+	transform: 
+	scale(1.0); 
+	/*(x y)*/
+	/*rotate(45deg) x y
+	skew(10deg) x y
+	translate(10px); x y*/
+}
+
+/* transition */
+
+.transition{
+	width: 600px;
+	height: 100px;
+	border: 1px solid #000;
+    margin: 50px auto;
+}
+
+.transition .kotak{
+	width: 100px;
+	height: 100px;
+	background-color: salmon;
+	transition: 
+	/*margin-left*/
+	1s 
+	/*delay*/ 2s 
+	ease-in-out
+	/*in out linear cubic-bezier(0,0,0)*/ ;
+}
+
+.transition:hover .kotak{
+	margin-left: 500px;
+	transform: rotate(360deg) scale(2);
+}
+
+/* animation */
+
+.animasi{
+	width: 100px;
+	height: 100px;
+	background-color: salmon;
+}
+
+.animasi:hover{
+	animation: 
+	/*name*/ animasi 
+	/*time*/ 1s 
+	/*jenis*/ ease 
+	/*jumlah*/ 3 
+	/*mode*/ forwards;
+}
+
+@keyframes animasi{
+	0% /*from*/{
+		width: 100px;
+	}
+
+	50%{
+		width: 200px;
+	}
+
+	100% /*to*/{
+		height: 300px;
+	}
+}
+
+
+

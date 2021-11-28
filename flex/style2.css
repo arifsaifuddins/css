@@ -1,0 +1,180 @@
+body{
+	font-family: sans-serif;
+	overflow: hidden;
+	background-color: #CBEFC7;
+}
+
+/* navbar */
+
+nav{
+	height: 50px;
+	display: flex;
+	background-color: #468228;
+	justify-content: space-around;
+	align-items: center;
+	color: #CBEFC7;
+	border-bottom: 1.5px solid #000;
+}
+
+nav .logo{
+	font-family:'Gloria Hallelujah', cursive;
+	letter-spacing: 2px;
+	font-size: 20px;
+}
+
+nav ul.menu1{
+	display: flex;
+	width: 35%;
+	justify-content: space-between;
+}
+
+nav ul.menu1 li a{
+	text-decoration: none;
+	color: inherit;
+	font-family: verdana;
+	font-size: 0.8em;
+	padding: 10px 15px;
+}
+
+nav ul.menu1 li a:hover{
+	color: #fff;
+	background-color: #066616;	
+	border-radius: 5px;
+	border: 1px solid #fff;
+}
+
+/* menu  */
+
+.toggle{
+	display: none;
+	flex-direction: column;
+	width: 100px;
+	height: 15px;
+	justify-content: space-between;
+	position: relative;
+	align-items: flex-end;
+}
+
+.toggle span{
+	border-radius: 2px;
+	display: block;
+	width: 25px;
+	height: 3px;
+	background-color: #CBEFC7;
+	transition: 1s;
+}
+
+.toggle input{
+	position: absolute;
+	top: -10px;
+	left: 71px;
+	opacity: 0;
+	width: 25px;
+	height: 28px;
+	cursor: pointer;
+	z-index: 5;
+}
+
+.toggle span:nth-child(2){
+	transform-origin: 0 0;
+}
+
+.toggle span:nth-child(4){
+	transform-origin: 0 100%;
+}
+
+.toggle input:checked ~ span:nth-child(3){
+	opacity: 0;
+	transform: scale(0);
+}
+
+.toggle input:checked ~ span:nth-child(2){
+	transform: rotate(45deg) translate(0, -3.3px);
+}
+
+.toggle input:checked ~ span:nth-child(4){
+	transform: rotate(-45deg) translate( 0, 3.3px);
+}
+
+nav .toggle ul.menu2 li a{
+	text-decoration: none;
+	color: inherit;
+	font-family: verdana;
+	font-size: .9em;
+	padding: 10px 15px;
+}
+
+nav .toggle ul.menu2 li a:hover{
+	background-color: #066616;	
+	border-radius: 5px ;
+	border: 1px solid #fff;
+	color: #fff;
+}
+
+/* responsive breakpoint */
+
+/* talbet */
+
+@media screen and (max-width: 700px){
+	nav{
+		justify-content: space-around;
+	}
+	nav ul.menu1{
+		width: 40%;
+		font-size: .9em;
+	}
+
+	nav ul.menu1 li a{
+		padding: 10px 15px;
+	}
+
+	nav ul.menu1 li a:hover{
+		background-color: #066616;	
+		border-radius: 5px;
+		border: 1px solid #fff;
+	}
+
+	nav .logo h1{
+		font-size: 25px;
+	}
+}
+
+/* mobile */
+
+@media screen and (max-width: 600px){
+	nav ul.menu1{
+		display: none;
+	}
+	nav .logo h1{
+		font-size: 20px;
+	}
+
+	nav .toggle ul.menu2{
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+		justify-content: space-around;
+		background-color: #468228;
+		border-left: 1px solid #000;
+		position: absolute;
+		right: 0;
+		left: -25%;
+		width: 180px;
+		height: 100vh;
+		padding-left:20px ;
+		/*align-items: center;*/
+		transition: 1s;
+		opacity: 0;
+		transform: translateX(100%);
+		z-index: -2;
+	}
+
+ 	nav .toggle input:checked ~ ul.menu2{
+ 		transform: translateX(0);
+ 		opacity: 1;
+ 	}
+
+	.toggle{
+		display: flex;
+	}
+}

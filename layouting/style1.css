@@ -1,0 +1,121 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	background-image: url(hitam.jpg);
+	background-size: cover;
+	background-position: center;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.container{
+	width: 90%;
+	background-color: #eaeaea;
+	margin: 0 auto;
+	border-right: 1px solid lightyellow;
+	border-left: 1px solid lightyellow;
+}
+.header{
+	height: 50px;
+	background-color: #eaeaea;
+	padding: 0 15px;
+	position: flex;
+}
+.active{
+	border-top: 5px solid #000;
+	
+}
+.header h1, ul{
+	line-height: 50px;
+}
+.header h1{
+	color: #FF0000;
+	font-weight:bolder;
+	font-size: 30px;
+	float: left;
+}
+.header ul{
+	float: right;
+}
+.header ul li{
+	display: inline-block;
+}
+.header ul li a{
+	font-size: 13px;
+	text-decoration: none;
+	color: #fff;
+	padding: 8px 10px;
+	border-radius: 10%;
+}
+.header ul li a:hover{
+	background-color: #eaeaea;
+	border:1px solid #000;
+	box-sizing: border-box;
+}
+.banner{
+	background-image: url(windows101.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 250px;
+	
+}
+.main .text{
+	padding: 8px 15px;
+	font: 17px/25px arial ;
+	text-align: justify;
+}
+.main .text h2{
+	font-size: 25px ;
+	font-family: abril;
+	color: red;
+	text-align: center;
+	margin: 20px;
+}
+
+span{
+	color: red;
+}
+.footer{
+	height: 30px;
+	background-color: #000;
+}
+.footer p{
+	text-align: center;
+	line-height: 30px;
+}
