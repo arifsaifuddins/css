@@ -1,0 +1,115 @@
+html{
+	position: relative;
+}
+
+.navbar-brand{
+	font-size: 30px;
+	font-family: impact;
+}
+
+.jumbotron{
+	padding-top: 100px;
+	background-image: url(../photo/gmbr4.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	overflow: hidden;
+}
+
+.jumbotron img{
+	width: 250px;
+	border: 4px solid #fff;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+}
+
+.jumbotron h1, .jumbotron p{
+	color: #fff;
+	font-weight: bold;
+	text-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+}
+
+hr{
+	width: 150px;
+	border-top: solid #111;
+} 
+
+.about p{
+	border-radius: 30px;
+	padding: 20px;
+	text-indent: 20px;
+	box-shadow: 0 0 5px #555;
+}
+
+/*.pleft, .pright{
+	transition: .7s;
+	opacity: 0;
+	transform: translate(-100px, 0);
+}
+
+.pright{
+	opacity: 0;
+	transform: translate(100px, 0);
+}
+
+.pleft.pgetout, .pright.pgetout{
+	opacity: 1;
+	transform: translate(0, 0);
+}*/
+
+.portfolio a{
+	border-radius: 30px;
+}
+
+.portfolio img{
+	height: 250px;
+	border-radius: 30px;
+	border: 2px solid #111;
+	width: 100%;
+}
+
+/*.portfolio .thumbnail{
+	opacity: 0;
+	transform: translate(0, -30px);
+	transition: .8s;
+}
+
+.portfolio .thumbnail.getout{
+	opacity: 1;
+	transform: translate(0 , 0);
+}*/
+
+section{
+	min-height: 500px;
+}
+
+.about{
+	background-color: #eee;
+}
+
+.contact{
+	min-height: 800px;
+}
+
+.about, .portfolio, .contact{
+	padding: 50px;
+}
+
+footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	background-color: #333;
+	display: grid;
+	place-content:center ;
+}
+
+footer p{
+	color: #fff;
+}
+
+
+
+
+
+
